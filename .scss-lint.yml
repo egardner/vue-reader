@@ -2,7 +2,7 @@
 
 scss_files: "source/stylesheets/**/*.scss"
 
-exclude: "source/stylesheets/_normalize.scss"
+exclude: ["source/stylesheets/_normalize.scss", "source/stylesheets/bourbon", "source/stylesheets/neat"]
 
 linters:
   BangFormat:
