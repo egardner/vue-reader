@@ -1,16 +1,20 @@
-<template>
-  <div id="app">
-    <h1>Hello World!</h1>
-    <component-a></component-a>
-  </div>
+<template lang="jade">
+#app
+  app-header
+  app-content
+  app-footer
 </template>
 
 <script>
-import ComponentA from "./ComponentA.vue";
+import AppHeader from './AppHeader.vue';
+import AppContent from './AppContent.vue';
+import AppFooter from './AppFooter.vue';
 
 export default {
   components: {
-    ComponentA
+    AppHeader,
+    AppContent,
+    AppFooter
   }
 }
 </script>
