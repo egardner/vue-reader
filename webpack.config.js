@@ -17,22 +17,22 @@ module.exports = {
 
   module: {
     loaders: [
-      {
+      { // use vue-loader for *.vue files
         test: /\.vue$/,
         loader: 'vue'
       },
-      {
+      { // use babel-loader for *.js files
         test: /source\/javascripts\/.*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
         loader: 'babel',
-      },
+      }
     ],
   },
 
   vue: {
     loaders: {
       scss: 'style!css!sass',
-      exclude: /node_modules|.\tmp|vendor/
+      exclude: /node_modules|\.tmp|vendor/
     }
   },
 

@@ -1,9 +1,15 @@
+<style lang="scss" scoped>
+</style>
+
 <template lang="jade">
-.container
- h1 Content goes here
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      message: "Hello world!"
+    }
+  }
 }
 </script>
