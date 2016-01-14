@@ -1,18 +1,18 @@
-.featured {
+.block-grid {
   padding: 0 1rem;
 }
 
-.featured h1 {
+.block-grid h1 {
   font-size: 1.5rem;
   line-height: 2;
   text-align: center;
 }
 
-.featured-list {
+.block-grid-list {
   @include outer-container;
 }
 
-.featured-item {
+.block-grid-item {
   @include span-columns(4);
   @include omega(3n);
 }

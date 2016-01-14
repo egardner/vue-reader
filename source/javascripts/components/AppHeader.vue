@@ -1,5 +1,4 @@
 <style lang="scss" scoped>
-
 $nav-bg-color: #333;
 $nav-height: 2.5rem;
 $nav-text-color: #fff;
@@ -15,11 +14,15 @@ h1 {
   line-height: $nav-height;
 }
 
+.app-title {
+  color: $nav-text-color;
+}
 </style>
 
 <template lang="jade">
 nav
-  h1 {{ msg }}
+  a.app-title(v-link="'/'")
+    h1 {{ msg }}
 </template>
 
 <script>

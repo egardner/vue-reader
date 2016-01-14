@@ -21,11 +21,27 @@
 <template lang="jade">
 .book-cover
   h3.book-cover-title {{ book.title }}
-  h4.book-cover-author By {{ book.author }}
+  h4.book-cover-author By {{ book.author | firstNameFirst }}
 </template>
 
 <script>
 export default {
-  props: ["book"]
+  props: ["book"],
+  data() {
+    return {
+      title: '',
+      author: ''
+    }
+  },
+  filters: {
+    firstNameFirst(text) {
+      let firstName = text.split(", ")[1]
+      let lastName  = text.split(", ")[0]
+      return `${firstName} ${lastName}`
+    }
+  },
+  methods: {
+    
+  }
 }
 </script>
