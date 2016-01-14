@@ -6,7 +6,9 @@ import Home from './components/Home.vue'
 import Search from './components/Search.vue'
 
 Vue.use(VueRouter)
-let router = new VueRouter()
+let router = new VueRouter({
+  history: true
+})
 
 router.map({
   '/': {
