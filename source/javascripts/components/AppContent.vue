@@ -2,6 +2,8 @@
 </style>
 
 <template lang="jade">
+#app-content
+  router-view
 </template>
 
 <script>

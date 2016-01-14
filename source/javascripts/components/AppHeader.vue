@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
 
-$nav-bg-color: #668B9E;
+$nav-bg-color: #333;
 $nav-height: 2.5rem;
 $nav-text-color: #fff;
 
