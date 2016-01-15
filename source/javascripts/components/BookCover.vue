@@ -67,7 +67,6 @@ export default {
   },
   ready() {
     this.getRepoContents()
-    return _.filter(this.files, {"path": "cover.jpg"})
   }
 }
 </script>
