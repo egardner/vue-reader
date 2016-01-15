@@ -13,6 +13,6 @@
 }
 
 .block-grid-item {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(3);
+  @include omega(4n);
 }

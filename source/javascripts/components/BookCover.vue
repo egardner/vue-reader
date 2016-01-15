@@ -2,7 +2,7 @@
 .book-cover {
   background-color: #ccc;
   border-radius: 4px;
-  height: 12em;
+  height: 15em;
   margin-bottom: 2rem;
   padding: 1rem;
 }
@@ -20,17 +20,28 @@
 
 <template lang="jade">
 .book-cover
-  h3.book-cover-title {{ book.title }}
+  h3.book-cover-title {{{ book.title }}}
   h4.book-cover-author By {{ book.author | firstNameFirst }}
 </template>
 
 <script>
+import _ from 'lodash'
 export default {
   props: ["book"],
   data() {
     return {
-      title: '',
-      author: ''
+      files: []
+    }
+  },
+  computed: {
+    title() {
+      return this.book.title
+    },
+    author() {
+      return this.book.author
+    },
+    repo() {
+      return this.book.repo
     }
   },
   filters: {
@@ -41,7 +52,22 @@ export default {
     }
   },
   methods: {
-    
+    getRepoContents() {
+      let owner = "GITenberg"
+      let url = `https://api.github.com/repos/${owner}/${this.repo}/git/trees/master`
+      let xhr = new XMLHttpRequest()
+      xhr.open('GET', url)
+      xhr.onload = () => {
+        if (xhr.status == 200) {
+          this.$set('files', JSON.parse(xhr.responseText).tree)
+        }
+      }
+      xhr.send()
+    }
+  },
+  ready() {
+    this.getRepoContents()
+    return _.filter(this.files, {"path": "cover.jpg"})
   }
 }
 </script>

@@ -24,6 +24,7 @@ export default {
         book.title      = description.split(" by ")[0]
         book.author     = description.split(" by ")[1].split("\n")[0]
         book.repo       = result.name
+        book.owner      = result.owner.login
         books.push(book)
       })
       return books

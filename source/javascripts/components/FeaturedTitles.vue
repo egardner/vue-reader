@@ -16,12 +16,12 @@ export default {
   data() {
     return {
       featuredItems: [
-        { title: "Frankenstein", author: "Shelley, Mary" },
-        { title: "Moby Dick", author: "Melville, Herman" },
-        { title: "Huckleberry Finn", author: "Twain, Mark" },
-        { title: "Pride and Prejudice", author: "Austen, Jane" },
-        { title: "Crime and Punishment", author: "Dostoyevsky, Fyodor" },
-        { title: "The Raven", author: "Poe, Edgar Allen" }
+        { title: "Frankenstein", author: "Shelley, Mary", repo: "Frankenstein_84" },
+        { title: "Moby Dick", author: "Melville, Herman", repo: "Moby-Dick--Or-The-Whale_2701" },
+        { title: "Huckleberry Finn", author: "Twain, Mark", repo: "Adventures-of-Huckleberry-Finn_76" },
+        { title: "Pride and Prejudice", author: "Austen, Jane", repo: "Pride-and-Prejudice_1342" },
+        { title: "Crime and Punishment", author: "Dostoyevsky, Fyodor", repo: "Crime-and-Punishment_2554" },
+        { title: "The Raven", author: "Poe, Edgar Allen", repo: "The-RavenIllustrated_45484" }
       ]
     }
   },
