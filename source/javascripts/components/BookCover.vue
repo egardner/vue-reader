@@ -21,11 +21,10 @@
 <template lang="jade">
 .book-cover
   h3.book-cover-title {{{ book.title }}}
-  h4.book-cover-author By {{ book.author | firstNameFirst }}
+  h4.book-cover-author By {{ book.author }}
 </template>
 
 <script>
-import _ from 'lodash'
 export default {
   props: ["book"],
   data() {
@@ -50,23 +49,6 @@ export default {
       let lastName  = text.split(", ")[0]
       return `${firstName} ${lastName}`
     }
-  },
-  methods: {
-    getRepoContents() {
-      let owner = "GITenberg"
-      let url = `https://api.github.com/repos/${owner}/${this.repo}/git/trees/master`
-      let xhr = new XMLHttpRequest()
-      xhr.open('GET', url)
-      xhr.onload = () => {
-        if (xhr.status == 200) {
-          this.$set('files', JSON.parse(xhr.responseText).tree)
-        }
-      }
-      xhr.send()
-    }
-  },
-  ready() {
-    this.getRepoContents()
   }
 }
 </script>

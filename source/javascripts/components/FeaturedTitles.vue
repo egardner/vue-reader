@@ -7,7 +7,8 @@
     h1 Featured Titles
     .block-grid-list
       li.block-grid-item(v-for="item in featuredItems")
-        book-cover(:book="item")
+        a(v-link="{ name: 'book', params: { bookID: item.repo }}")
+          book-cover(:book="item")
 </template>
 
 <script>
@@ -21,7 +22,9 @@ export default {
         { title: "Huckleberry Finn", author: "Twain, Mark", repo: "Adventures-of-Huckleberry-Finn_76" },
         { title: "Pride and Prejudice", author: "Austen, Jane", repo: "Pride-and-Prejudice_1342" },
         { title: "Crime and Punishment", author: "Dostoyevsky, Fyodor", repo: "Crime-and-Punishment_2554" },
-        { title: "The Raven", author: "Poe, Edgar Allen", repo: "The-RavenIllustrated_45484" }
+        { title: "Don Quixote", author: "Cervantes, Miguel de", repo: "Don-Quixote_996" },
+        { title: "Narrative of the Life of Frederick Douglass", author: "Douglass, Frederick", repo: "Narrative-of-the-Life-of-Frederick-Douglass-an-American-Slave_23" },
+        { title: "The Time Machine", author: "Wells, H.G.", repo: "The-Time-Machine_35" }
       ]
     }
   },

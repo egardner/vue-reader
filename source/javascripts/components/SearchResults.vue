@@ -7,7 +7,8 @@
     h1 Search Results
     .block-grid-list
       li.block-grid-item(v-for="item in books")
-        book-cover(:book="item")
+        a(v-link="{ name: 'book', params: { bookID: item.repo }}")
+          book-cover(:book="item")
 </template>
 
 <script>
