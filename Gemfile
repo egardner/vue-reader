@@ -27,6 +27,9 @@ gem 'kramdown'
 # Linter
 gem 'scss_lint', require: false
 
+# Deployment
+gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
+
 group :development do
   gem 'byebug'
 end

@@ -56,3 +56,8 @@ configure :server do
   end
 end
 
+# Currently not working
+# activate :deploy do |deploy|
+#   deploy.build_before = true
+#   deploy.method = :git
+# end
