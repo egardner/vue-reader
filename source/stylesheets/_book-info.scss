@@ -1,0 +1,26 @@
+.book-info-container {
+  padding: 2rem 1rem;
+}
+
+.book-info {
+  @include outer-container;
+}
+
+.book-info-cover {
+  @include span-columns(4);
+}
+
+.book-info-text {
+  @include span-columns(8);
+  @include omega;
+}
+
+.book-title {
+  color: $white;
+  font-size: 2em;
+}
+
+.book-author {
+  color: $white;
+  font-size: 1.25em;
+}
